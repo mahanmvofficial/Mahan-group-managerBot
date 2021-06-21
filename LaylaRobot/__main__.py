@@ -76,7 +76,7 @@ def get_readable_time(seconds: int) -> str:
 PM_START_TEXT = """
 **Hell there 👋**
 ɪ'ᴍ ʜᴇʀᴇ ᴛᴏ ʜᴇʟᴘ ʏᴏᴜ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘꜱ! \nʜɪᴛ /help
-Maintained by @TheStyleKing ❤
+Developed by @TheStyleKing ❤
 """
 
 buttons = [
@@ -93,7 +93,7 @@ buttons = [
     [
         InlineKeyboardButton(text="Source", callback_data="source_"),
         InlineKeyboardButton(
-            text="нєℓρ αи∂ ϲοммαи∂ѕ ❔", callback_data="help_back"
+            text="нєℓρ❔", callback_data="help_back"
         ),
     ]
 ]
