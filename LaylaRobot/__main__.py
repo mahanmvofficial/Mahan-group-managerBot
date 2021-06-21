@@ -74,15 +74,15 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Hello, I'M Layla
-`ɪ'ᴍ ʜᴇʀᴇ ᴛᴏ ʜᴇʟᴘ ʏᴏᴜ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘꜱ! ʜɪᴛ` /help
-Maintained by @HEROGAMERS1 ❤
+**Hell there 👋**
+ɪ'ᴍ ʜᴇʀᴇ ᴛᴏ ʜᴇʟᴘ ʏᴏᴜ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘꜱ! \nʜɪᴛ /help
+Maintained by @TheStyleKing ❤
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕️ ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕️", url="t.me/LaylaRobot?startgroup=true"),
+            text="➕️ ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕️", url="t.me/KICHCHA_YASH_FC_bot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(text="ᴀʙᴏᴜᴛ", callback_data="layla_"),
@@ -91,27 +91,24 @@ buttons = [
         ),
     ],
     [
-        InlineKeyboardButton(text="ʟᴏɢꜱ", url=f"https://t.me/laylalogs"),
+        InlineKeyboardButton(text="Source", callback_data="source_"),
         InlineKeyboardButton(
-            text="ꜰᴇᴅᴇʀᴀᴛɪᴏɴ", url=f"https://t.me/AntiRippingOrganization/410"
+            text="нєℓρ αи∂ ϲοммαи∂ѕ ❔", callback_data="help_back"
         ),
-    ],
-    [
-        InlineKeyboardButton(text="ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅꜱ❔", callback_data="help_back"),
-    ],
+    ]
 ]
 
 
 HELP_STRINGS = """
-`Hi.. I'M` Layla
+`Hi.. I'M` [Kiccha and hash Fan](https://telegra.ph/file/2a1a7c13ae62d2a61e005.jpg)
 `ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴꜱ ʙᴇʟᴏᴡ ᴛᴏ ɢᴇᴛ ᴅᴏᴄᴜᴍᴇɴᴛᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ꜱᴘᴇᴄɪꜰɪᴄ ᴍᴏᴅᴜʟᴇꜱ..`
-Powered by :- [Awesome Bots](t.me/Laylalist)"""
+Developed by :- [TheStyleking](t.me/TheStyleKing)"""
 
-layla_IMG = "https://telegra.ph/file/524b78577a42b02b2f074.jpg"
+layla_IMG = "https://telegra.ph/file/2a1a7c13ae62d2a61e005.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project [Hero](t.me/HEROGAMERS1) \
- Supporting isnt always financial! [AwesomeSupport](t.me/LaylaList) \
+ You can support the project [Style King](t.me/TheStyleKing) \
+ Supporting isnt always financial!\
  Those who cannot provide monetary support are welcome to help us develop the bot at ."""
 
 IMPORTED = {}
@@ -357,7 +354,7 @@ def layla_about_callback(update, context):
     query = update.callback_query
     if query.data == "layla_":
         query.message.edit_text(
-            text=""" ℹ️ I'm *Layla*, a powerful group management bot built to help you manage your group easily.
+            text=""" ℹ️ I'm *Kiccha and yash fan*, a powerful group management bot built to help you manage your group easily.
                  \n❍ I can restrict users.
                  \n❍ I can greet users with customizable welcome messages and even set a group's rules.
                  \n❍ I have an advanced anti-flood system.
@@ -365,10 +362,9 @@ def layla_about_callback(update, context):
                  \n❍ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
                  \n❍ I check for admins' permissions before executing any command and more stuffs
                  \n\n_Layla's licensed under the GNU General Public License v3.0_
-                 \n❍ Awesome Bots @LaylaList
-                 \n❍ Support Group @AwesomeSupport
-                 \n❍ Assistant @LaylaAssistant.
-                 \nHere is the [💾Repository](https://github.com/QueenArzoo/LaylaRobot).
+                 \n❍ Developer is @TheStyleKing
+                 \n❍ Support Group [Kiccha and yash FC group](https://t.me/joinchat/6NcdN3J3Nnw3MDg1)
+                 \n❍ Awesome bot.
                  \n\nIf you have any question about Layla, let us know at .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -394,19 +390,7 @@ def layla_about_callback(update, context):
 def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
-        query.message.edit_text(
-            text=""" Hi..🤗 I'm *Layla*
-                 \nHere is the [Source Code](https://github.com/QueenArzoo/LaylaRobot) .""",
-            parse_mode=ParseMode.MARKDOWN,
-            disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup(
-                [
-                 [
-                    InlineKeyboardButton(text="Go Back", callback_data="source_back")
-                 ]
-                ]
-            ),
-        )
+        query.message.reply_sticker("CAACAgEAAxkBAAIPzGDQqX5DydmJppdkw1oTe29ErF1ZAAKJAQACyBxgRp2VIIktwpB6HgQ")
     elif query.data == "source_back":
         query.message.edit_text(
                 PM_START_TEXT,
