@@ -76,13 +76,13 @@ def get_readable_time(seconds: int) -> str:
 PM_START_TEXT = """
 **Hell there 👋**
 ɪ'ᴍ ʜᴇʀᴇ ᴛᴏ ʜᴇʟᴘ ʏᴏᴜ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘꜱ! \nʜɪᴛ /help
-Developed by @TheStyleKing ❤
+Developed by @Mahan_Official_Admin ❤
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕️ ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕️", url="t.me/KICHCHA_YASH_FC_bot?startgroup=true"),
+            text="➕️ ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕️", url="t.me/mahanmvroobot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(text="ᴀʙᴏᴜᴛ", callback_data="layla_"),
@@ -102,12 +102,12 @@ buttons = [
 HELP_STRINGS = """
 `Hi.. I'M` [Kiccha and hash Fan](https://telegra.ph/file/2a1a7c13ae62d2a61e005.jpg)
 `ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴꜱ ʙᴇʟᴏᴡ ᴛᴏ ɢᴇᴛ ᴅᴏᴄᴜᴍᴇɴᴛᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ꜱᴘᴇᴄɪꜰɪᴄ ᴍᴏᴅᴜʟᴇꜱ..`
-Developed by :- [TheStyleking](t.me/TheStyleKing)"""
+Developed by :- [Mahan M.V](t.me/Mahan_Official_Admin)"""
 
 layla_IMG = "https://telegra.ph/file/2a1a7c13ae62d2a61e005.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project [Style King](t.me/TheStyleKing) \
+ You can support the project [Style King](t.me/Mahan_Official_Sdmin) \
  Supporting isnt always financial!\
  Those who cannot provide monetary support are welcome to help us develop the bot at ."""
 
@@ -354,7 +354,7 @@ def layla_about_callback(update, context):
     query = update.callback_query
     if query.data == "layla_":
         query.message.edit_text(
-            text=""" ℹ️ I'm *Kiccha and yash fan*, a powerful group management bot built to help you manage your group easily.
+            text=""" ℹ️ I'm *Mahan M.V*, a powerful group management bot built to help you manage your group easily.
                  \n❍ I can restrict users.
                  \n❍ I can greet users with customizable welcome messages and even set a group's rules.
                  \n❍ I have an advanced anti-flood system.
@@ -362,8 +362,8 @@ def layla_about_callback(update, context):
                  \n❍ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
                  \n❍ I check for admins' permissions before executing any command and more stuffs
                  \n\n_Layla's licensed under the GNU General Public License v3.0_
-                 \n❍ Developer is @TheStyleKing
-                 \n❍ Support Group [Kiccha and yash FC group](https://t.me/joinchat/6NcdN3J3Nnw3MDg1)
+                 \n❍ Developer is @Mahan_Official_Admin
+                 \n❍ Support Group [Mahan M.V Group](https://t.me/MahanMVGroup)
                  \n❍ Awesome bot.
                  \n\nIf you have any question about Layla, let us know at .""",
             parse_mode=ParseMode.MARKDOWN,
