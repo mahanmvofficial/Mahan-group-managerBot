@@ -77,7 +77,7 @@ PM_START_TEXT = """
 
 **Hello There 👋
 
-im a group manager bot maintained by [BeatKing Mahan](tg://user?id=1773361002).
+I'm a group manager bot maintained by [BeatKing Mahan](tg://user?id=1773361002).
 
 For more commands click /help**...
 
