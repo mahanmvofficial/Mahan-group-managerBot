@@ -75,9 +75,9 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 
-**hi {}, my name is {} 😝 
+**Hello There 👋
 
-im a group manager bot maintained by [BeatKing Mahan](tg://user?id={}).
+im a group manager bot maintained by [BeatKing Mahan](tg://user?id=1773361002).
 
 For more commands click /help**...
 
@@ -90,12 +90,12 @@ For more commands click /help**...
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕️ ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕️", url="t.me/mahanmvproautofilterbot?startgroup=true"),
+            text="➕️ Add me to your group ➕️", url="t.me/mahanmvproautofilterbot?startgroup=true"),
     ],
     [
-        InlineKeyboardButton(text="ᴀʙᴏᴜᴛ", callback_data="layla_"),
+        InlineKeyboardButton(text="About", callback_data="layla_"),
         InlineKeyboardButton(
-            text="ꜱᴜᴘᴘᴏʀᴛ", url=f"https://t.me/MahanMVGroup"),
+            text="Support", url=f"https://t.me/MahanMVGroup"),
 
     ],
     [
@@ -110,7 +110,7 @@ buttons = [
 HELP_STRINGS = """
 `Hi.. I'M` [Mahan M.V](https://telegra.ph/file/55bf600c1eb21c0a256cc.jpg)
 `ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴꜱ ʙᴇʟᴏᴡ ᴛᴏ ɢᴇᴛ ᴅᴏᴄᴜᴍᴇɴᴛᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ꜱᴘᴇᴄɪꜰɪᴄ ᴍᴏᴅᴜʟᴇꜱ..`
-Developed by :- [Mahan M.V](t.me/Mahan_Official_Admin)"""
+Maintained by :- [Mahan M.V](t.me/Mahan_Official_Admin)"""
 
 layla_IMG = "https://telegra.ph/file/55bf600c1eb21c0a256cc.jpg"
 
