@@ -100,14 +100,14 @@ buttons = [
 
 
 HELP_STRINGS = """
-`Hi.. I'M` [Kiccha and hash Fan](https://telegra.ph/file/2a1a7c13ae62d2a61e005.jpg)
+`Hi.. I'M` [Mahan M.V](https://telegra.ph/file/55bf600c1eb21c0a256cc.jpg)
 `ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴꜱ ʙᴇʟᴏᴡ ᴛᴏ ɢᴇᴛ ᴅᴏᴄᴜᴍᴇɴᴛᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ꜱᴘᴇᴄɪꜰɪᴄ ᴍᴏᴅᴜʟᴇꜱ..`
 Developed by :- [Mahan M.V](t.me/Mahan_Official_Admin)"""
 
-layla_IMG = "https://telegra.ph/file/2a1a7c13ae62d2a61e005.jpg"
+layla_IMG = "https://telegra.ph/file/55bf600c1eb21c0a256cc.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project [Style King](t.me/Mahan_Official_Sdmin) \
+ You can support the project [Mahan M.V](t.me/Mahan_Official_Sdmin) \
  Supporting isnt always financial!\
  Those who cannot provide monetary support are welcome to help us develop the bot at ."""
 
