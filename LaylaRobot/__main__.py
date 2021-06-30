@@ -108,11 +108,11 @@ buttons = [
 
 
 HELP_STRINGS = """
-`Hi.. I'M` [Mahan M.V](https://telegra.ph/file/55bf600c1eb21c0a256cc.jpg)
-`ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴꜱ ʙᴇʟᴏᴡ ᴛᴏ ɢᴇᴛ ᴅᴏᴄᴜᴍᴇɴᴛᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ꜱᴘᴇᴄɪꜰɪᴄ ᴍᴏᴅᴜʟᴇꜱ..`
+Hi.. I'M Mahan M.V
+Click on below buttons to get documentations About specific modules.[.](https://telegra.ph/file/55bf600c1eb21c0a256cc.jpg)
 Maintained by :- [Mahan M.V](t.me/Mahan_Official_Admin)"""
 
-layla_IMG = "https://telegra.ph/file/55bf600c1eb21c0a256cc.jpg"
+MAHAN_IMG = "https://telegra.ph/file/55bf600c1eb21c0a256cc.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
  You can support the project [Mahan M.V](t.me/Mahan_Official_Sdmin) \
@@ -219,7 +219,8 @@ def start(update: Update, context: CallbackContext):
                 IMPORTED["rules"].send_rules(update, args[0], from_pm=True)
 
         else:
-            update.effective_message.reply_text(
+            update.effective_message.reply_photo(
+                MAHAN_IMG,
                 PM_START_TEXT,
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
