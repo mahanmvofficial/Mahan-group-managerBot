@@ -74,10 +74,18 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-**Hell there 👋**
-ɪ'ᴍ ʜᴇʀᴇ ᴛᴏ ʜᴇʟᴘ ʏᴏᴜ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘꜱ! \nʜɪᴛ /help
-Developed by @Mahan_Official_Admin ❤
+
+**hi {}, my name is {} 😝 
+
+im a group manager bot maintained by [BeatKing Mahan](tg://user?id={}).
+
+For more commands click /help**...
+
+**Keep in mind this bot is made only for @MahanMVGroup.**
 """
+
+
+
 
 buttons = [
     [
