@@ -27,7 +27,7 @@ speedtest-cli
 coffeehouse==2.2.4
 regex
 bleach
-git+https://github.com/starry69/python-markdown2.git
+git+ssh://git@github.com/starry69/python-markdown2.git
 wikipedia
 telethon==1.16.4
 telegraph
@@ -69,4 +69,3 @@ better_profanity
 nudepy
 motor
 cloudscraper
-git+https://mahanmvofficial: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@github.com/starry69/python-markdown2.git 
