@@ -9,5 +9,5 @@ def main():
         print(f"Error: Failed to execute 'python -m LaylaRobot'. {e}")
         sys.exit(1)
 
-if name == "main":
+if __name__ == "__main__":
     main()
