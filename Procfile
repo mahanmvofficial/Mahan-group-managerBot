@@ -1,1 +1,1 @@
-worker: python -m LaylaRobot
+worker: python bot.py
