@@ -27,7 +27,7 @@ speedtest-cli
 coffeehouse==2.2.4
 regex
 bleach
-https://github.com/trentm/python-markdown2@master
+markdown2
 wikipedia
 telethon==1.16.4
 telegraph
