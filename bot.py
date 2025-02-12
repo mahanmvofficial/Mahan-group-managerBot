@@ -3,11 +3,11 @@ import sys
 
 def main():
     try:
-        # Run the command: python -m BotD
-        subprocess.run([sys.executable, "-m", "BotD"], check=True)
+        # Run the command: python -m LaylaRobot
+        subprocess.run([sys.executable, "-m", "LaylaRobot"], check=True)
     except subprocess.CalledProcessError as e:
-        print(f"Error: Failed to execute 'python -m BotD'. {e}")
+        print(f"Error: Failed to execute 'python -m LaylaRobot'. {e}")
         sys.exit(1)
 
-if __name__ == "__main__":
+if name == "main":
     main()
