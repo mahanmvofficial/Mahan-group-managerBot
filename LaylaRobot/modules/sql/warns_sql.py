@@ -1,9 +1,6 @@
 import threading
 
 from LaylaRobot.modules.sql import BASE, SESSION
-from sqlalchemy import Boolean, Column, Integer, String, UnicodeText, distinct, func
-from sqlalchemy.dialects import postgresql
-
 
 class Warns(BASE):
     __tablename__ = "warns"
