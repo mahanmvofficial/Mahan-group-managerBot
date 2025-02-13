@@ -16,7 +16,7 @@ class Config(object):
 
     API_ID = 7598661  # integer value, dont use ""
     API_HASH = "925a979e9ea55b7fe91fc30931813592"
-    TOKEN = "7415632841:AAHdJMWKOr_edaTktJYUaAYZywYRb0vVUC0"  # This var used to be API_KEY but it is now TOKEN, adjust accordingly.
+    TOKEN = "7415632841:AAF8j-osR2sqwciLXVx8O7Xr_-805j4HoxY"  # This var used to be API_KEY but it is now TOKEN, adjust accordingly.
     OWNER_ID = 1346612506  # If you dont know, run the bot and do /id in your private chat with it, also an integer
     OWNER_USERNAME = "mahanmvofficial"
     SUPPORT_CHAT = "Kannada_Dominators"  # Your own group for support, do not add the @
