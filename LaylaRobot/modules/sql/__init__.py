@@ -1,10 +1,14 @@
-from pymongo import MongoClient
 import os
 
-DB_URI = os.environ.get("DB_URI")  # Get MongoDB URI from environment variables
+DB_URI = os.environ.get("DB_URI")  # Get the MongoDB URI from environment variables
+
+# 🔥 Debugging: Print DB_URI
+print(f"🔍 DB_URI: {DB_URI}")  # Add this line
 
 if not DB_URI:
-    raise ValueError("DB_URI is not set. Please set it in environment variables.")
+    raise ValueError("🚨 ERROR: DB_URI is empty! Please check your environment variables.")
+
+from pymongo import MongoClient
 
 client = MongoClient(DB_URI)  # Connect to MongoDB
-db = client.get_database()  # Get the default database
+database = client.get_database()  # Get the default database
