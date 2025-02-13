@@ -7,4 +7,4 @@ if not DB_URI:
     raise ValueError("DB_URI is not set. Please set it in environment variables.")
 
 client = MongoClient(DB_URI)  # Connect to MongoDB
-db = client.get_database()  # Get the default database
+database = client.get_database()  # Get the default database
