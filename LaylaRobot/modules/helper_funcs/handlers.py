@@ -1,4 +1,3 @@
-import LaylaRobot.modules.sql.blacklistusers_sql as sql
 from LaylaRobot import ALLOW_EXCL
 from LaylaRobot import DEV_USERS, DRAGONS, DEMONS, TIGERS, WOLVES
 
