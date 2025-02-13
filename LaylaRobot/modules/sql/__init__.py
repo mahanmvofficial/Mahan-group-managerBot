@@ -1,15 +1,10 @@
-from LaylaRobot import DB_URI
-from sqlalchemy import create_engine
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import scoped_session, sessionmaker
+from pymongo import MongoClient
+import os
 
+DB_URI = os.environ.get("DB_URI")  # Get MongoDB URI from environment variables
 
-def start() -> scoped_session:
-    engine = create_engine(DB_URI, client_encoding="utf8")
-    BASE.metadata.bind = engine
-    BASE.metadata.create_all(engine)
-    return scoped_session(sessionmaker(bind=engine, autoflush=False))
+if not DB_URI:
+    raise ValueError("DB_URI is not set. Please set it in environment variables.")
 
-
-BASE = declarative_base()
-SESSION = start()
+client = MongoClient(DB_URI)  # Connect to MongoDB
+db = client.get_database()  # Get the default database
