@@ -32,9 +32,13 @@ if ENV:
     TOKEN = os.environ.get("TOKEN", None)
 
     try:
-        OWNER_ID = os.environ.get("OWNER_ID")
-if OWNER_ID is None:
+        import os
+
+OWNER_ID = os.environ.get("OWNER_ID")
+
+if not OWNER_ID:
     raise ValueError("OWNER_ID environment variable is not set.")
+
 OWNER_ID = int(OWNER_ID)
     except ValueError:
         raise Exception("Your OWNER_ID env variable is not a valid integer.")
