@@ -1,68 +1,47 @@
 import threading
+from pymongo import MongoClient
+import os
 
-from LaylaRobot.modules.sql import BASE, SESSION
-from sqlalchemy import Column, String, UnicodeText
+# Connect to MongoDB
+DB_URI = os.getenv("DB_URI")  # Ensure DB_URI is set in your environment
+if not DB_URI:
+    raise ValueError("DB_URI is missing! Check your environment variables.")
 
-
-class BlacklistUsers(BASE):
-    __tablename__ = "blacklistusers"
-    user_id = Column(String(14), primary_key=True)
-    reason = Column(UnicodeText)
-
-    def __init__(self, user_id, reason=None):
-        self.user_id = user_id
-        self.reason = reason
-
-
-BlacklistUsers.__table__.create(checkfirst=True)
+client = MongoClient(DB_URI)
+database = client.get_database()
+blacklist_users = database.blacklist_users  # MongoDB Collection
 
 BLACKLIST_LOCK = threading.RLock()
 BLACKLIST_USERS = set()
 
-
 def blacklist_user(user_id, reason=None):
+    """Add a user to the blacklist."""
     with BLACKLIST_LOCK:
-        user = SESSION.query(BlacklistUsers).get(str(user_id))
-        if not user:
-            user = BlacklistUsers(str(user_id), reason)
-        else:
-            user.reason = reason
-
-        SESSION.add(user)
-        SESSION.commit()
+        blacklist_users.update_one(
+            {"user_id": str(user_id)}, 
+            {"$set": {"reason": reason}}, 
+            upsert=True
+        )
         __load_blacklist_userid_list()
-
 
 def unblacklist_user(user_id):
+    """Remove a user from the blacklist."""
     with BLACKLIST_LOCK:
-        user = SESSION.query(BlacklistUsers).get(str(user_id))
-        if user:
-            SESSION.delete(user)
-
-        SESSION.commit()
+        blacklist_users.delete_one({"user_id": str(user_id)})
         __load_blacklist_userid_list()
 
-
 def get_reason(user_id):
-    user = SESSION.query(BlacklistUsers).get(str(user_id))
-    rep = ""
-    if user:
-        rep = user.reason
-
-    SESSION.close()
-    return rep
-
+    """Get the reason why a user is blacklisted."""
+    user = blacklist_users.find_one({"user_id": str(user_id)})
+    return user["reason"] if user else ""
 
 def is_user_blacklisted(user_id):
-    return user_id in BLACKLIST_USERS
-
+    """Check if a user is blacklisted."""
+    return str(user_id) in BLACKLIST_USERS
 
 def __load_blacklist_userid_list():
+    """Load all blacklisted users into a set."""
     global BLACKLIST_USERS
-    try:
-        BLACKLIST_USERS = {int(x.user_id) for x in SESSION.query(BlacklistUsers).all()}
-    finally:
-        SESSION.close()
-
-
+    BLACKLIST_USERS = {x["user_id"] for x in blacklist_users.find()}
+    
 __load_blacklist_userid_list()
